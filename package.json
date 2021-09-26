@@ -1,0 +1,31 @@
+{
+  "name": "price-tracker",
+  "version": "1.0.0",
+  "description": "A website to track online deals and discounts.",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jest": "^27.2.2",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel-perez1/price-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriel-perez1/price-tracker/issues"
+  },
+  "homepage": "https://github.com/gabriel-perez1/price-tracker#readme"
+}
