@@ -5,7 +5,7 @@ const {User} = require('../../models');
 // Retrieve all users
 router.get('/', (req, res) => {
     // MySQL equivalent to -> SELECT * FROM users;
-    User.findAll({attributes: { exclude: ['password']}})
+    User.findAll()
         .then (data => res.json(data))
         .catch(err => {
             console.log(err);
@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
 // Retrieve a single user.
 router.get ('/:id', (req, res) => {
     User.findOne({
-        attributes: {exclude: ['password']},
         where: {id: req.params.id}
     })
     .then (data => {
