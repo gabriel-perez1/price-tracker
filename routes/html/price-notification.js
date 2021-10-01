@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
+router.get('/price-notification', (req, res) => {
     res.render('price-notification');
 });
 

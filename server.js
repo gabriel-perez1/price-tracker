@@ -2,15 +2,7 @@ const express = require('express');
 const routes = require('./routes');
 const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
-const helpers = require('./lib/helpers');
-
-const hbs = exphbs.create({
-  helpers,
-  
-  partialsDir : [
-    "views/partials/",
-  ],
-});
+const hbs = exphbs.create({});
 
 const app = express();
 app.engine('handlebars', hbs.engine);
