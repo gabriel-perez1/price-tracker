@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Tracker</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -18,7 +18,25 @@
         <main>
             {{{ body }}}
         </main>
-    </div>
+    </div>>
+  <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+    var socket = io.connect()
+
+    socket.on('connect', function () {
+            alert('connect');
+        });
+
+        socket.on('error', function (data) {
+            console.log(data || 'error');
+        });
+
+        socket.on('connect_failed', function (data) {
+            console.log(data || 'connect_failed');
+        });
+        
+  </script>
 
 </body>
 

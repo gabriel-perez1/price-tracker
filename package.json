@@ -16,6 +16,7 @@
     "node-cron": "^3.0.0",
     "node-mailer": "^0.1.1",
     "sequelize": "^6.6.5",
+    "socket.io": "^4.2.0",
     "unofficial-amazon-search": "^2.0.7"
   },
   "devDependencies": {},
