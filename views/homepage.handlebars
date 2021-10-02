@@ -77,6 +77,17 @@
     <section>
         <h3>Recently viewed</h3>
     </section>
-    </body>
+    <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+    var socket = io();
+    socket.on("connect", () => {
+      console.log(socket.id); // x8WIv7-mJelg7on_ALbx
+    });
+
+    socket.on("disconnect", () => {
+      console.log(socket.id); // undefined
+    });
+  </script>
 </body>
 </html>
