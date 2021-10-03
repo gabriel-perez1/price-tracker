@@ -1,3 +1,18 @@
+$('#searchForm').on('shown.bs.collapse', function () {
+  // focus input on collapse
+  $("#search").focus()
+})
+
+$('#searchForm').on('hidden.bs.collapse', function () {
+  // focus input on collapse
+  $("#search").blur()
+})
+
+
+
+
+
+
 const {searchAmazon, AmazonSearchResult} = require('unofficial-amazon-search');
 
 searchAmazon('anything you would put in the search bar').then(data => {
