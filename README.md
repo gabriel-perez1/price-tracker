@@ -1,9 +1,8 @@
 # Price-Tracker 💵
-web app that keeps track of product prices and notifies the user.
 
-## Description 
+A Web App that keeps track of product prices and notifies the user.
 
-
+## Description
 
 # Pre-requisites
 
@@ -49,4 +48,3 @@ npm start
 - Anna Thereza Navales
 
 ### ©️2021 Price-Tracker, Inc
-
