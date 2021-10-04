@@ -29,11 +29,9 @@
         <h2 class="fs-4">Find your Amazon favorites at a lower rate!</h2>
         
         <nav class="navbar navbar-light bg-light">
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <a>
+          <form action="/product-info" method="POST" class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </a>
           </form>
         </nav>
         </div>
@@ -45,10 +43,9 @@
                   <div class="card-header py-3">
                     <h4 class="my-0 fw-normal">Product</h4>
                   </div>
-                  <div class="card-body">
+                  <div class="card-body" id="productImg">
                     <ul class="list-unstyled mt-3 mb-4">
                     <!---amazon product-->
-
                     </ul>
                   </div>
                 </div>
@@ -56,19 +53,8 @@
             </div>
     </section>
     <section>
-        <h3>Recently viewed</h3>
     </section>
     <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-
-    var socket = io();
-    socket.on("connect", () => {
-      console.log(socket.id); // x8WIv7-mJelg7on_ALbx
-    });
-
-    socket.on("disconnect", () => {
-      console.log(socket.id); // undefined
-    });
-  </script>
+    <script src="/public/searchProduct.js"></script>
 </body>
 </html>
