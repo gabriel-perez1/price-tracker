@@ -2,14 +2,8 @@ var mysql = require('mysql');
 var express = require('express');
 var session = require('express-session');
 var path = require('path');
-PORT = process.env.PORT || 5000;
 
-var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : '',
-	database : 'price_tracker'
-});
+var connection = mysql.createConnection('mysql://b01b9c25965f08:b5f865a7@us-cdbr-east-04.cleardb.com/heroku_b751fd196fc59f1?reconnect=true');
 
 var app = express();
 app.use(session({
@@ -53,4 +47,7 @@ app.get('/home', function(request, response) {
 	response.end();
 });
 
-app.listen(PORT);
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});

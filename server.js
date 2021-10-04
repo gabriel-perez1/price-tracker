@@ -4,12 +4,12 @@ const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 const path = require('path');
+PORT = process.env.PORT || 5000;
 
 var http = require('http');
 const app = express();
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-var PORT = process.env.PORT || 5000;
 var server = http.createServer(app);
 
 
@@ -29,4 +29,3 @@ sequelize.sync({
 }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });
-

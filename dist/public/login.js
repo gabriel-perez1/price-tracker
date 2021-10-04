@@ -3,12 +3,7 @@ var express = require('express');
 var session = require('express-session');
 var path = require('path');
 
-var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	email : '',
-	database : 'price_tracker'
-});
+var connection = mysql.createConnection('mysql://b01b9c25965f08:b5f865a7@us-cdbr-east-04.cleardb.com/heroku_b751fd196fc59f1?reconnect=true');
 
 var app = express();
 app.use(session({

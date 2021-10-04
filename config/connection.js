@@ -3,10 +3,6 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 // create connection to our db
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
-    host: 'localhost',
-    dialect: 'mysql',
-    port: 3306
-});
+const sequelize = new Sequelize('mysql://b01b9c25965f08:b5f865a7@us-cdbr-east-04.cleardb.com/heroku_b751fd196fc59f1?reconnect=true');
 
 module.exports = sequelize;
