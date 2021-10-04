@@ -2,6 +2,7 @@ var mysql = require('mysql');
 var express = require('express');
 var session = require('express-session');
 var path = require('path');
+PORT = process.env.PORT || 80
 
 var connection = mysql.createConnection({
 	host     : 'localhost',
@@ -52,4 +53,4 @@ app.get('/home', function(request, response) {
 	response.end();
 });
 
-app.listen(80);
+app.listen(PORT);
