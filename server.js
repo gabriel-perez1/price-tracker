@@ -9,7 +9,7 @@ var http = require('http');
 const app = express();
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 var server = http.createServer(app);
 
 
@@ -30,11 +30,3 @@ sequelize.sync({
     app.listen(PORT, () => console.log('Now listening'));
 });
 
-
-var io = require('socket.io')(server);
-
-io.sockets.on('connection', function (socket) {
-    console.log('\nGot a new connection from: ' + socket.id + '\n');
-});
-
-server.listen(3000);
